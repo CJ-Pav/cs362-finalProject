@@ -81,8 +81,8 @@ public class UrlValidatorTest extends TestCase {
     * @param testObjects Used to create a url.
     */
    public void testIsValid(Object[] testObjects, long allowAllSchemes) {
-	      UrlValidator urlVal = new UrlValidator(null, null, allowAllSchemes);
-	      //UrlValidator urlVal = new UrlValidator(null, allowAllSchemes);
+      UrlValidator urlVal = new UrlValidator(null, null, allowAllSchemes);
+      //UrlValidator urlVal = new UrlValidator(null, allowAllSchemes);
       assertTrue(urlVal.isValid("http://www.google.com"));
       assertTrue(urlVal.isValid("http://www.google.com/"));
       int statusPerLine = 60;
@@ -91,7 +91,7 @@ public class UrlValidatorTest extends TestCase {
          statusPerLine = 6;
       }
       do {
-          StringBuilder testBuffer = new StringBuilder();
+         StringBuilder testBuffer = new StringBuilder();
          boolean expected = true;
          for (int testPartsIndexIndex = 0; testPartsIndexIndex < testPartsIndex.length; ++testPartsIndexIndex) {
             int index = testPartsIndex[testPartsIndexIndex];

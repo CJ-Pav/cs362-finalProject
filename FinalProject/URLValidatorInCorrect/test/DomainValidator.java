@@ -1836,7 +1836,7 @@ public class DomainValidator implements Serializable {
      * This field is used to detect whether the getInstance has been called.
      * After this, the method updateTLDOverride is not allowed to be called.
      * This field does not need to be volatile since it is only accessed from
-     * synchronized methods.
+     * synchronized methods. 
      */
     private static boolean inUse = false;
 
@@ -1990,7 +1990,7 @@ public class DomainValidator implements Serializable {
     /**
      * Converts potentially Unicode input to punycode.
      * If conversion fails, returns the original input.
-     *
+     * 
      * @param input the string to convert, not null
      * @return converted input, or original input if conversion fails
      */
